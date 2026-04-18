@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marutham | Secure Access</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f4f0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; width: 320px; }
+        h2 { color: #2d5a27; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #2d5a27; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #1e3d1a; }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <h2>மருதம் (Marutham)</h2>
+    <p>Sign in to your Farm Dashboard</p>
+    
+    <form id="loginForm">
+        <input type="text" id="userEmail" placeholder="Enter Username/Email" required>
+        <input type="password" id="userPass" placeholder="Enter Password" required>
+        <button type="submit">LOGIN</button>
+    </form>
+</div>
+
+<script>
+    // This script catches the click and forces the move to the next page
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // This stops the page from just refreshing
+        console.log("Login button clicked!"); // Check this in F12 console
+        
+        // This MUST match the name of your second file exactly
+        window.location.href = "dashboard.html"; 
+    });
+</script>
+
+</body>
+</html>
